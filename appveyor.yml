@@ -56,6 +56,8 @@ install:
   # - ps: dir; if( $lastexitcode -eq 0 ){ dir include/CL } else { Write-Output boom }
   # Create the static import lib in a directory called lib, so findopencl() will find it
   - ps: ls
+  - ps: build_using_cmake.bat
+  - ps: ls
   - ps: mkdir lib
   - ps: pushd lib
   - ps: ls
