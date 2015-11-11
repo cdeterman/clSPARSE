@@ -58,6 +58,7 @@ install:
   - ps: ls
   - cmd: build_using_cmake.bat
   - ps: ls
+  - ps: ls bin
   - ps: mkdir lib
   - ps: pushd lib
   - ps: ls
