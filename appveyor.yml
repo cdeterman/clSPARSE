@@ -38,6 +38,8 @@ init:
 install:
   - echo install step
   - ps: ls ..\\..
+  - ps: ls ..
+  - ps: ls
   - ps: mkdir $env:OPENCL_ROOT
   - ps: pushd $env:OPENCL_ROOT
   - ps: ls $env:OPENCL_ROOT
@@ -53,8 +55,10 @@ install:
   - ps: wget $opencl_registry/api/1.2/ | select -ExpandProperty links | where {$_.href -like "*.h*"} | select -ExpandProperty outerText | foreach{ wget $opencl_registry/api/1.2/$_ -OutFile inc/CL/$_ }
   # - ps: dir; if( $lastexitcode -eq 0 ){ dir include/CL } else { Write-Output boom }
   # Create the static import lib in a directory called lib, so findopencl() will find it
+  - ps: ls
   - ps: mkdir lib
   - ps: pushd lib
+  - ps: ls
   - cmake -G "NMake Makefiles" ..
   - nmake
   - ls
