@@ -37,6 +37,7 @@ init:
 # and unattended installs not well supported
 install:
   - echo install step
+  - ps: ls
   - ps: mkdir $env:OPENCL_ROOT
   - ps: pushd $env:OPENCL_ROOT
   - ps: ls $env:OPENCL_ROOT
