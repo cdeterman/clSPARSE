@@ -60,6 +60,7 @@ install:
   - ps: pushd lib
   - ps: ls
   - cmake -G "NMake Makefiles" ..
+  -ps: ls C:/projects/clsparse/bin/opencl/lib
   - nmake
   - ls
   - ps: popd
