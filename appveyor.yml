@@ -39,6 +39,7 @@ install:
   - echo install step
   - ps: mkdir $env:OPENCL_ROOT
   - ps: pushd $env:OPENCL_ROOT
+  - ps: ls $env:OPENCL_ROOT
   - ps: $opencl_registry = $env:OPENCL_REGISTRY
   # This downloads the source to the example/demo icd library
   - ps: wget $opencl_registry/specs/opencl-icd-1.2.11.0.tgz -OutFile opencl-icd-1.2.11.0.tgz
